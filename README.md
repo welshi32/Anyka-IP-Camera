@@ -38,7 +38,8 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | CPU                    | **AK3918EN088V200** (AliOS)           |
 | OS                     | **AliOS Things 3.2**                  |
 | Resolution             | 1MP sensor output (software upscaled) |
-| PTZ                    | Works via app only                    |
+| PTZ                    | Works via app only                    |![1000001203](https://github.com/user-attachments/assets/70e48122-df15-4127-baff-bd8cce4ae324)
+
 | Video Access           | **No RTSP**, no open stream           |
 | Protocols              | Proprietary app-only                  |
 | Shell                  | `>` prompt, no BusyBox, no commands   |
@@ -46,7 +47,7 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | Flash Chip             | XM25QH32C (4MB)                       |
 | Wasted Space           | ~2.4MB of empty space                 |
 
-<img width="795" height="795" alt="Screenshot 2025-07-15 at 10-30-15 2025 Hot Dual Antenna Wifi Camera 1080p Hd 360 Degree Wireless Security Webcam Ptz System Outdoor Home Nightvision - Buy Smart Home Indoor 2mp Wifi Ip Camera camera Surveillance Security Syste" src="https://github.com/user-attachments/assets/cf7e5329-2273-4771-93fd-bb631bab2a33" />
+
 
 ## Discovery Process
 
