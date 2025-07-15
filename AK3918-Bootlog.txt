@@ -1,0 +1,92 @@
+
+U-Boot 2019.10.0-V4.0.17-ge3313ce7-dirty (Aug 07 2023 - 19:37:59 +0800)
+
+ASIC PLL: 400MHz
+Model: S200W_EVB_CBD_AK3918EV200W_V1.0.0
+DRAM:  32 MiB
+CORE: 400(Mhz) VCLK: 200(Mhz)
+Flash: SF: Detected XM25QH32C with page size 256 Bytes, erase size 4 KiB, total 4 MiB
+4 MiB
+Loading Environment from SPI Flash... OK
+[init_mvspec_io][l:68]mv_spec node status disable
+In:    uart0@20130000
+Out:   uart0@20130000
+Err:   uart0@20130000
+Net:   Net Initialization Skipped
+No ethernet found.
+Hit CTRL+C to stop autoboot:  0
+SF: Detected XM25QH32C with page size 256 Bytes, erase size 4 KiB, total 4 MiB
+device 0 offset 0x34000, size 0x100000
+SF: 1048576 bytes @ 0x34000 Read: OK
+SF: Detected XM25QH32C with page size 256 Bytes, erase size 4 KiB, total 4 MiB
+device 0 offset 0x134000, size 0x145000
+SF: 1331200 bytes @ 0x134000 Read: OK
+SF: Detected XM25QH32C with page size 256 Bytes, erase size 4 KiB, total 4 MiB
+device 0 offset 0x2a000, size 0x4a1b
+SF: 18971 bytes @ 0x2a000 Read: OK
+## Booting kernel from Legacy Image at 80c00000 ...
+   Image Name:   Alios Things 3.2
+   Image Type:   ARM U-Boot Standalone Program (lzma compressed)
+   Data Size:    986791 Bytes = 963.7 KiB
+   Load Address: 81000000
+   Entry Point:  81000000
+   Verifying Checksum ... OK
+   Uncompressing Standalone Program
+   Uncompressing  ... ## Booting kernel from Legacy Image at 80a00000 ...
+   Image Name:   AliOS Things#0x00000000
+   Image Type:   ARM Linux Kernel Image (lzma compressed)
+   Data Size:    710916 Bytes = 694.3 KiB
+   Load Address: 80000000
+   Entry Point:  80000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 813f0000
+   Booting using the fdt blob at 0x813f0000
+   Uncompressing Kernel Image
+   Uncompressing  ... (addr=81600000 size=a00000)
+   Using Device Tree in place at 813f0000, end 813f7a1a
+
+Starting kernel ...
+
+[A/DRV] cpu freq: 400 MHz
+[A/DRV] hclk/dclk freq: 200 MHz
+[A/DRV] dphyclk freq: 200 MHz
+[A/DRV] asic freq: 400 MHz
+[A/DRV] gclk freq: 100 MHz
+[A/DRV] vclk freq: 200 MHz
+[A/DRV] peri freq: 600 MHz
+[A/AOS] [10]kernel init
+[A/DRV] phys memory start addr: 0x80000000 size: 0x2000000
+[A/DRV] phys reserved memory addr: 0x81600000 size: 0xa00000
+[mvspec_gpio_init][l:114]mv_spec node status disable
+[F/DRV] SPI0_CLK:25000000 Hz
+[A/AOS] Device          Size    Offset          Name
+[A/AOS] mtdblock0       160KB   0x00000000      SPL
+[A/AOS] mtdblock1       4KB     0x00028000      ENV
+[A/AOS] mtdblock2       4KB     0x00029000      ENVBK
+[A/AOS] mtdblock3       40KB    0x0002a000      DTB
+[A/AOS] mtdblock4       1024KB  0x00034000      KERNEL
+[A/AOS] mtdblock5       1300KB  0x00134000      APP
+[A/AOS] mtdblock6       660KB   0x00279000      ROOTFS
+[A/AOS] mtdblock7       884KB   0x0031e000      CONFIG
+[A/AOS] mtdblock8       20KB    0x003fb000      CONFIG2
+[A/AOS] mtdblock9       4096KB  0x00000000      ALL
+[A/AOS] mount type 5 dev /dev/ram0 path /tmp
+[A/AOS] vfs_register_fs path /tmp, ret 0
+[A/BEN] Mount ramfs on /tmp successfully.
+[A/AOS] mount type 3 dev /dev/mtdblock6 path /
+[A/AOS] vfs_register_fs path /, ret 0
+[A/BEN] Mount romfs on / successfully.
+[A/AOS] mount type 2 dev /dev/mtdblock7 path mnt/mtd
+[A/AOS] vfs_register_fs path /mnt/mtd, ret 0
+[A/BEN] Mount littlefs on mnt/mtd successfully.
+[A/AOS] mount type 2 dev /dev/mtdblock8 path etc/config
+[A/AOS] vfs_register_fs path /etc/config, ret 0
+[A/BEN] Mount littlefs on etc/config successfully.
+[A/AOS] aos 3.4.3 build@Dec  8 2023 15:34:40 by server@server-PC
+[A/AOS] kernel heap: 1024 KB, Used: 209 KB, Free: 814 KB
+[A/DRV] i2c0 frequency request 400000KHz set to 390 KHz
+[A/DRV] adapter [i2c0] registered
+[A/DRV] client [ 0x30] registered with bus id 0
+[A/DRV] anyka,dma-reserve register ok
+[A/DRV] number of video dev: 1
+[A/DRV]
