@@ -1,0 +1,163 @@
+U-Boot 2019.10.0-V4.0.17-ge9a715ae-dirty (May 15 2023 - 20:40:49 +0800)
+
+ASIC PLL: 400MHz
+Model: S200W_EVB_CBD_AK3918EV200W_V1.0.0
+DRAM:  32 MiB
+CORE: 400(Mhz) VCLK: 200(Mhz)
+Flash: SF: Detected w25q64cv with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+8 MiB
+Loading Environment from SPI Flash... OK
+[init_mvspec_io][l:68]mv_spec node status disable
+In:    uart0@20130000
+Out:   uart0@20130000
+Err:   uart0@20130000
+Net:   Net Initialization Skipped
+No ethernet found.
+Hit CTRL+C to stop autoboot:  0
+SF: Detected w25q64cv with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+device 0 offset 0x34000, size 0x100000
+SF: 1048576 bytes @ 0x34000 Read: OK
+SF: Detected w25q64cv with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+device 0 offset 0x134000, size 0x145000
+SF: 1331200 bytes @ 0x134000 Read: OK
+SF: Detected w25q64cv with page size 256 Bytes, erase size 4 KiB, total 8 MiB
+device 0 offset 0x2a000, size 0x4b13
+SF: 19219 bytes @ 0x2a000 Read: OK
+## Booting kernel from Legacy Image at 80c00000 ...
+   Image Name:   Alios Things 3.2
+   Image Type:   ARM U-Boot Standalone Program (lzma compressed)
+   Data Size:    1004860 Bytes = 981.3 KiB
+   Load Address: 81000000
+   Entry Point:  81000000
+   Verifying Checksum ... OK
+   Uncompressing Standalone Program
+   Uncompressing  ... ## Booting kernel from Legacy Image at 80a00000 ...
+   Image Name:   AliOS Things#0x00000000
+   Image Type:   ARM Linux Kernel Image (lzma compressed)
+   Data Size:    710781 Bytes = 694.1 KiB
+   Load Address: 80000000
+   Entry Point:  80000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 813f0000
+   Booting using the fdt blob at 0x813f0000
+   Uncompressing Kernel Image
+   Uncompressing  ... (addr=81600000 size=a00000)
+   Using Device Tree in place at 813f0000, end 813f7b12
+
+Starting kernel ...
+
+[A/DRV] cpu freq: 400 MHz
+[A/DRV] hclk/dclk freq: 200 MHz
+[A/DRV] dphyclk freq: 200 MHz
+[A/DRV] asic freq: 400 MHz
+[A/DRV] gclk freq: 100 MHz
+[A/DRV] vclk freq: 200 MHz
+[A/DRV] peri freq: 600 MHz
+[A/AOS] [10]kernel init
+[A/DRV] phys memory start addr: 0x80000000 size: 0x2000000
+[A/DRV] phys reserved memory addr: 0x81600000 size: 0xa00000
+[mvspec_gpio_init][l:114]mv_spec node status disable
+[F/DRV] SPI0_CLK:25000000 Hz
+[F/DRV] spiflash probe id failed
+[A/AOS] Device          Size    Offset          Name
+[A/AOS] mtdblock0       160KB   0x00000000      SPL
+[A/AOS] mtdblock1       4KB     0x00028000      ENV
+[A/AOS] mtdblock2       4KB     0x00029000      ENVBK
+[A/AOS] mtdblock3       40KB    0x0002a000      DTB
+[A/AOS] mtdblock4       1024KB  0x00034000      KERNEL
+[A/AOS] mtdblock5       1300KB  0x00134000      APP
+[A/AOS] mtdblock6       660KB   0x00279000      ROOTFS
+[A/AOS] mtdblock7       884KB   0x0031e000      CONFIG
+[A/AOS] mtdblock8       20KB    0x003fb000      CONFIG2
+[A/AOS] mtdblock9       4096KB  0x00000000      ALL
+[A/AOS] mount type 5 dev /dev/ram0 path /tmp
+[A/AOS] vfs_register_fs path /tmp, ret 0
+[A/BEN] Mount ramfs on /tmp successfully.
+[A/AOS] mount type 3 dev /dev/mtdblock6 path /
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:10128
+
+[E/rom] romfs_devcacheread failed, ret -1
+[E/rom] romfs_fsconfigure failed, ndx -1
+[E/rom] ERROR: romfs_fsconfigure failed: -1
+[A/BEN] Mount romfs on / failed.
+[A/AOS] mount type 2 dev /dev/mtdblock7 path mnt/mtd
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:12768
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:12784
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:12768
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:12784
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/LFS] components/fs/littlefs/littlefs-v220/lfs.c:1015:error: Corrupted dir pair at {0x0, 0x1}
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:1294:error: Failed to mount /dev/mtdblock7!
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:1424:error: Failed to register /dev/mtdblock7 onto mnt/mtd
+[A/BEN] Mount littlefs on mnt/mtd failed.
+[A/AOS] mount type 2 dev /dev/mtdblock8 path etc/config
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:16304
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:16320
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:16304
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/BEN] [nor_flash_hal] spi_flash_read page fail, page:16320
+
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:227:error: littlefs_block_read ret: -1
+[E/LFS] components/fs/littlefs/littlefs-v220/lfs.c:1015:error: Corrupted dir pair at {0x0, 0x1}
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:1294:error: Failed to mount /dev/mtdblock8!
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:1424:error: Failed to register /dev/mtdblock8 onto etc/config
+[A/BEN] Mount littlefs on etc/config failed.
+[A/AOS] aos 3.4.3 build@Sep  7 2023 16:13:42 by server@server-PC
+[A/AOS] kernel heap: 1024 KB, Used: 206 KB, Free: 817 KB
+[A/DRV] i2c0 frequency request 400000KHz set to 390 KHz
+[A/DRV] adapter [i2c0] registered
+[A/DRV] client [ 0x30] registered with bus id 0
+[A/DRV] client [ 0x10] registered with bus id 0
+[A/DRV] anyka,dma-reserve register ok
+[A/DRV] number of video dev: 1
+[A/DRV] input_video_init 3051
+[A/DRV] video-0-0: register ok
+[A/DRV] video-0-1: register ok
+[A/DRV] isp-param-0: register ok
+[A/DRV] of_video_dev_reg vi0 register ok
+[F/DRV]  MIPI: ak_sensor_match fail
+[F/DRV]  MIPI: camera_sc1346_reg i2c add driver failed, ret:-19!
+[F/DRV] gc1054_sensor_probe_id_func fail
+[F/DRV] gc1054_match fail
+[F/DRV] camera_gc1054_reg i2c add driver failed, ret:-19!
+[F/DRV] mis2006_sensor_probe_id_func fail
+[F/DRV] mis2006_match fail
+[F/DRV] camera_mis2006_reg i2c add driver failed, ret:-19!
+[A/DRV] sc1345 probe id: 0xda23
+[A/DRV] v4l-subdev0: register ok
+[A/DRV] sc1345 Probed success, subdev:0x80345704
+[A/DRV] i2c_add_driver i2c_client attach driver [v4l-subdev0] done!!!
+[F/DRV] camera_sc2335_reg i2c add driver failed, ret:-1!
+[A/AOS] netdev_register netdev 0x80347af8 name usb0
+[A/DRV] anyka,ak39ev200-efuse register ok
+[A/AOS] netdev_register netdev 0x8034be48 name eth0
+[A/ETH] anyka,ak39ev200-ethernet register ok
+[A/MCI] mmc0: akmci->gpio_cd = 34
+[A/MCI] mmc0: power_save: 1 detect mode: 2
+[A/MCI] mmc0: gpio_power:57 active level: 0
+[A/MCI] mmc0: card_status@probe =0.(1=CARD_PLUGED, 0=CARD_UNPLUGED)
+[A/MCI] mmc1: gpio_rst : 62 active level: 0
+[A/MCI] mmc1: power_save: 0 detect mode: 0
+[A/MCI] mmc1: gpio_power:51 active level: 0
+[A/MCI] mmc1: card_status@probe =1.(1=CARD_PLUGED, 0=CARD_UNPLUGED)
+[A/MOT] motor0 device register
+[A/MOT] motor1 device register
+[A/MOT] ms32006 ircut register ok
+[A/DRV] i2c_add_driver i2c_client attach driver [ms32006] done!!!
+[A/AOS] [96]application start
+[A/AOS] vfs_file_new_by_path,305, open inode failed
+[A/MCI] mmc0: detect thread start
+[A/MCI] mmc1: detect start
+mmcsd_detect msg arrived for host 0x8034d698 card 0x0
