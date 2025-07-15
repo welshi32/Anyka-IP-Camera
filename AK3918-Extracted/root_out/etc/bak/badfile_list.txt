@@ -1,0 +1,2 @@
+[Badfile]
+filecount=0

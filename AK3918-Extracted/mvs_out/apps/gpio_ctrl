@@ -1,0 +1,55 @@
+#!/bin/sh
+
+gpio_pin=$1
+gpio_operation=$2
+gpio_w_value=$3
+
+GPIO_CFG_PATH=/sys/class/gpio/export
+GPIO_OPER_PATH=/sys/class/gpio
+
+usage()
+{
+    echo "example:"
+    echo "gpio_ctrl.sh pin operation[w/r] value[0/1]"
+}
+
+gpio_init()
+{
+    if [ -d "$GPIO_OPER_PATH/GPIO$gpio_pin" ];
+    then 
+        test=1
+    else
+        #echo "need to init"
+        echo $gpio_pin > $GPIO_CFG_PATH
+    fi
+}
+
+gpio_operation_w()
+{
+    echo "write GPIO pin[$gpio_pin]"
+    echo "out" > $GPIO_OPER_PATH/GPIO$gpio_pin/direction
+    echo "$gpio_w_value" > $GPIO_OPER_PATH/GPIO$gpio_pin/value
+}
+
+gpio_operation_r()
+{
+    echo "read GPIO pin[$gpio_pin]"
+    #echo "in" > $GPIO_OPER_PATH/gpio$gpio_pin/direction
+    read_value=`cat $GPIO_OPER_PATH/GPIO$gpio_pin/value`
+    echo "$read_value"
+}
+
+
+case "$gpio_operation" in
+    w)
+        gpio_init
+        gpio_operation_w
+        ;;
+    r)
+        gpio_init
+        gpio_operation_r
+        ;;
+    *)
+        usage
+        ;;
+esac
