@@ -38,8 +38,7 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | CPU                    | **AK3918EN088V200** (AliOS)           |
 | OS                     | **AliOS Things 3.2**                  |
 | Resolution             | 1MP sensor output (software upscaled) |
-| PTZ                    | Works via app only                    |![1000001203](https://github.com/user-attachments/assets/70e48122-df15-4127-baff-bd8cce4ae324)
-
+| PTZ                    | Works via app only                    |
 | Video Access           | **No RTSP**, no open stream           |
 | Protocols              | Proprietary app-only                  |
 | Shell                  | `>` prompt, no BusyBox, no commands   |
@@ -48,6 +47,7 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | Wasted Space           | ~2.4MB of empty space                 |
 
 
+![1000001203](https://github.com/user-attachments/assets/073031da-c60e-4ae1-9a29-554dd9858859)
 
 ## Discovery Process
 
