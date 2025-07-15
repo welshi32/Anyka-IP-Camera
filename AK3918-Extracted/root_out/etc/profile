@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
+
+LD_LIBRARY_PATH=/lib:/usr/lib:/mvs/lib:/mvs/isp_lib
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export LD_LIBRARY_PATH PATH
+
+#host name
+USER="`id -un`"
+LOGNAME=$USER
+HOSTNAME='/bin/hostname'
+export USER LOGNAME HOSTNAME
+
+#alias
+alias ll="ls -al"
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+export PS1='V380-linux# '
+
+ulimit -c 1024
+echo "/tmp/core_%e_%p_%t" > /proc/sys/kernel/core_pattern

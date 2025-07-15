@@ -1,0 +1,9 @@
+::sysinit:/etc/init.d/rcS
+::respawn:/sbin/inetd -f -e /etc/inetd.conf
+::respawn:-/bin/sh
+
+::restart:/sbin/init
+
+::ctrlaltdel:/sbin/reboot
+::shutdown:/bin/umount -a -r
+::shutdown:/sbin/swapoff -a

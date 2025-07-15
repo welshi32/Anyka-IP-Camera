@@ -1,0 +1,39 @@
+#!/bin/sh
+
+/bin/mount -t proc proc /proc
+/bin/mount -t sysfs none /sys
+
+# /bin/mount -t ramfs ramfs /home
+
+echo 4 4 1 7 > /proc/sys/kernel/printk
+
+for initscript in /etc/init.d/S[0-9][0-9]*
+do
+    if [ -x $initscript ] ;
+    then
+        echo "[RCS]: $initscript"
+        $initscript
+    fi
+done
+
+echo "mount all file system..."
+/bin/mount -av
+
+runlevel=S
+prevlevel=N
+umask 022
+export runlevel prevlevel
+
+mkdir /var/cache
+mkdir /var/run
+mkdir /var/log
+mkdir /var/spool
+
+echo "**************************"
+echo "    Love Linux ! ! ! "
+echo "**************************"
+
+/bin/hostname -F /etc/sysconfig/HOSTNAME
+
+#local service
+/etc/init.d/rc.local
