@@ -3,6 +3,7 @@ Reverse engineering a cheap Anyka chipset IP cma
 > _This repository documents the internal details, firmware behavior, and misleading claims of a commonly sold low-cost AliExpress/Alibaba "4K AI PTZ" IP camera using the AK3918EN088V200 SoC._
 
 ---
+<img width="795" height="795" alt="Screenshot 2025-07-15 at 10-30-15 2025 Hot Dual Antenna Wifi Camera 1080p Hd 360 Degree Wireless Security Webcam Ptz System Outdoor Home Nightvision - Buy Smart Home Indoor 2mp Wifi Ip Camera camera Surveillance Security Syste" src="https://github.com/user-attachments/assets/49f962ce-381f-483f-80d8-c12a58734ddb" />
 
 ## Summary
 
