@@ -46,13 +46,13 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | Flash Chip             | XM25QH32C (4MB)                       |
 | Wasted Space           | ~2.4MB of empty space                 |
 
+<img width="795" height="795" alt="Screenshot 2025-07-15 at 10-30-15 2025 Hot Dual Antenna Wifi Camera 1080p Hd 360 Degree Wireless Security Webcam Ptz System Outdoor Home Nightvision - Buy Smart Home Indoor 2mp Wifi Ip Camera camera Surveillance Security Syste" src="https://github.com/user-attachments/assets/cf7e5329-2273-4771-93fd-bb631bab2a33" />
 
 ## Discovery Process
 
 - Accessed UART via exposed headers
 - Serial output confirmed bootloader into **AliOS Things**
 - DHCP hostname reported as `aliosthings`
-- Dumped flash with CH341A + SOIC-8 clip
 - Reverse engineered filesystem and confirmed:
   - No BusyBox
   - No RTSP server binary
