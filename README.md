@@ -46,7 +46,6 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | Flash Chip             | XM25QH32C (4MB)                       |
 | Wasted Space           | ~2.4MB of empty space                 |
 
-
 ![1000001203](https://github.com/user-attachments/assets/073031da-c60e-4ae1-9a29-554dd9858859)
 
 ## Discovery Process
@@ -104,3 +103,52 @@ This camera is a great example of anti-user firmware design:
 It runs a locked RTOS instead of Linux, disables local streaming, and hides behind marketing buzzwords like "AI" and "4K".
 
 The hardware has potential. The firmware kills it.
+
+## Hardware/Firmware Quirks
+
+UART Lockout Behavior (Autoboot Halt)
+
+Many Anyka-based IP cameras using the AK3918EN088V200 and AliOS Things 3.x implement a basic UART lockout mechanism that halts the system during boot if a UART connection is detected.
+🔍 Behavior Summary
+
+    UART RX connected during boot:
+
+        U-Boot proceeds until kernel or application handoff, then halts
+
+        No kernel panic, no factory mode — just a silent stall
+
+        Appears intentionally designed to block debugging or dumping
+
+    UART RX disconnected during boot:
+
+        System boots normally
+
+        Application starts (user.strip.elf loads), filesystem mounts, etc.
+
+        UART can be safely connected after boot begins
+
+🧪 Workaround
+
+    Do not connect UART RX (camera → adapter TX) during power-on
+
+    After ~5–10 seconds (once U-Boot passes), connect RX
+
+    You can now observe logs and attempt runtime interaction
+
+Optional:
+
+    Add a switch or jumper to enable/disable UART RX
+
+    Use a diode or tri-state buffer to delay RX detection
+
+🧠 Technical Suspicion
+
+This behavior likely stems from one of:
+
+    A U-Boot check on early UART input (even silence levels can trigger)
+
+    Bootloader treating UART as test entry trigger (factory escape hatch)
+
+    A simple check for line low / pin state on RX GPIO during early boot
+
+There is no busybox, ls, ps, or full shell — even if UART boots through, it lands in a minimal pseudo-shell (>) with read-only access and no tools.
