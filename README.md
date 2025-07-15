@@ -19,7 +19,6 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 
 ## Claimed Specs (From Listing)
 
-|------------------------|-----------------------------|
 | Feature                | Claimed                     |
 |------------------------|-----------------------------|
 | CPU                    | AK3918 V300 / V330          |
@@ -30,11 +29,9 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | Protocols              | RTSP, ONVIF, HTTP, FTP      |
 | Audio                  | 2-way, ADPCM                |
 | Storage                | TF Card + Cloud             |
-|------------------------|-----------------------------|
 
 ## Actual Details (Confirmed)
 
-|------------------------|---------------------------------------|
 | Feature                | Actual                                |
 |------------------------|---------------------------------------|
 | CPU                    | **AK3918EN088V200** (AliOS)           |
@@ -47,7 +44,6 @@ Despite being advertised as a **Linux-based 4K ONVIF-capable IP camera**, this d
 | Web Interface          |  None                                 |
 | Flash Chip             | XM25QH32C (4MB)                       |
 | Wasted Space           | ~2.4MB of empty space                 |
-|------------------------|---------------------------------------|
 
 
 ## Discovery Process
