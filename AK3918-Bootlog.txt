@@ -1,3 +1,5 @@
+CORE: 400(Mhz) VCLK: 200(Mhz)
+
 
 U-Boot 2019.10.0-V4.0.17-ge3313ce7-dirty (Aug 07 2023 - 19:37:59 +0800)
 
@@ -89,4 +91,555 @@ Starting kernel ...
 [A/DRV] client [ 0x30] registered with bus id 0
 [A/DRV] anyka,dma-reserve register ok
 [A/DRV] number of video dev: 1
-[A/DRV]
+[A/DRV] input_video_init 3051
+[A/DRV] video-0-0: register ok
+[A/DRV] video-0-1: register ok
+[A/DRV] isp-param-0: register ok
+[A/DRV] of_video_dev_reg vi0 register ok
+
+[A/DRV] v4l-subdev0: register ok
+[A/DRV] i2c_add_driver i2c_client attach driver [v4l-subdev0] done!!!
+[F/DRV] camera_gc1054_reg i2c add driver failed, ret:-1!
+[F/DRV] camera_mis2006_reg i2c add driver failed, ret:-1!
+[F/DRV] camera_sc1345_reg i2c add driver failed, ret:-1!
+[F/DRV] camera_sc2335_reg i2c add driver failed, ret:-1!
+[A/AOS] netdev_register netdev 0x803486e0 name usb0
+[A/DRV] anyka,ak39ev200-efuse register ok
+[A/MCI] mmc0: akmci->gpio_cd = 34
+[A/MCI] mmc0: power_save: 1 detect mode: 2
+[A/MCI] mmc0: gpio_power:57 active level: 0
+[A/MCI] mmc0: card_status@probe =0.(1=CARD_PLUGED, 0=CARD_UNPLUGED)
+[A/MCI] mmc1: gpio_rst : 62 active level: 0
+[A/MCI] mmc1: power_save: 0 detect mode: 0
+[A/MCI] mmc1: gpio_power:51 active level: 0
+[A/MCI] mmc1: card_status@probe =1.(1=CARD_PLUGED, 0=CARD_UNPLUGED)
+[A/MOT] motor0 device register
+[A/MOT] anyka,ak39ev200-motor0 register ok
+[A/MOT] motor1 device register
+[A/MOT] anyka,ak39ev200-motor1 register ok
+[F/MOT] ms32006_reg i2c add driver failed, ret: -1!
+[A/AOS] [92]application start
+readdir mutex init success
+audio_play mutex init success
+ANYKA:welcome user space, timestamp:136
+------------------------ mvs into ----------------------
+[1970-01-01 02:00:00] [0:00:00:130] [DEF] version:V1.1.0 build date:Dec 11 2023 14:05:05
+[A/BEN] load /usr/user.strip.elf success
+[A/MCI] mmc0: detect thread start
+[A/MCI] mmc1: detect start
+[1970-01-01 02:00:00] [0:00:00:205] [DEF] [WDG] _pth_watchdog_worker watchdog start...
+[1970-01-01 02:00:00] [0:00:00:270] [DEF] pcba_check_enable:0 login_status:1, don't need check pcba
+[_elicense_data_checkout][l:3131]code: -4
+old encrytion-chip [0x247cc10 , 38259728] check ->
+=== product id:32 devid:84465821 ===
+[1970-01-01 02:00:00] [0:00:00:295] [DEF] === [did:84465821][pid:32][vid:0] ===
+build log_upload date:Jul 13 2023_19:28:39
+[1970-01-01 02:00:00] [0:00:00:355] [DEF] mv_sdcard_manage_init start
+mmcsd_detect msg arrived for host 0x8034df80 card 0x0
+[A/BEN] CISTPL_MANFID 0x007a, 0x6011
+[F/MCI] mmc1: clock: 25000000Hz
+[1970-01-01 02:00:03] [0:00:03:365] [DEF] mv_ipc_config_load start
+ispsdk_lib version:libplat_isp_sdk V7.0.01
+open isp dev: /dev/isp-param-0
+[E/DRV] ispdrv_init 2492
+[E/DRV] dma alloc vir:0x0xc0010320, phy:0x807bf320
+[A/DRV] isplib: isp_module_init: ak_isp_drv_lib V0.3.02
+[A/DRV] isplib: isp2 module init: isp_struct size=42220, dma_area=0x0xc0010320, dma_bytes=11808, io_base=0xf0300000
+[A/DRV] isplib: isp2_module_init cb:0x8036218c, sensor_cb:0x80345f20, reg_base:0xf0300000, isp_struct:0x80366428
+[A/DRV] isplib: all:2155606816-0
+[A/DRV] isplib: stat:2155614336-0
+[A/DRV] isplib: 3d:0
+--- AK_ISP_sdk_init g_isp_fd[0]=515 ---
+[A/DRV] ak_cam_file_open 939 input_id:0, chn_id:0
+[A/DRV] ak_cam_file_open 939 input_id:0, chn_id:1
+=== manufacturers_num[0], sensor_id_num[0], type[1345], width[1280], height[720], manufacturers[sc] ===
+=== manufacturers_num[0], sensor_id_num[1], type[1346], width[1280], height[720], manufacturers[sc] ===
+=== width[1280], height[720], manufacturers[sc] ===
+[1970-01-01 02:00:03] [0:00:03:370] [DEF] sensor width:1280 high:720
+[1970-01-01 02:00:03] [0:00:03:370] [DEF] read /mnt/mtd/mvconf/avframe_attr.ini
+[1970-01-01 02:00:03] [0:00:03:390] [DEF] read /mnt/mtd/mvconf/record.ini
+[1970-01-01 02:00:03] [0:00:03:430] [DEF] read /mnt/mtd/mvconf/factory_const.ini
+[1970-01-01 02:00:03] [0:00:03:460] [DEF] crop w:1280, crop h:720
+[1970-01-01 02:00:03] [0:00:03:465] [DEF] new force level:0 old force level:0 sensor w:1280 h:720 target w:1280 h:720
+============= dev attr ============
+lens type: 0
+network reset mode: 0
+vframe encode type: 1
+aframe encode type: 5
+light ctrl: 2
+fps-max: d[0]-n[0]
+Main: 1280 * 720
+Sub:  640 * 360
+===================================
+[1970-01-01 02:00:03] [0:00:03:465] [DEF] read /mnt/mtd/mvconf/user_info.ini
+[1970-01-01 02:00:03] [0:00:03:500] [DEF] read /mnt/mtd/mvconf/version.ini
+=============== [TIME_SCHEDULE] init ==============
+time_cnt: 0
+ct1: 0
+stime_hms: 00-00-00
+etime_hms: 00-00-00
+ct2: 0
+stime_hms: 00-00-00
+etime_hms: 00-00-00
+ct3: 0
+stime_hms: 00-00-00
+etime_hms: 00-00-00
+area_x_cnt: 6
+area_y_cnt: 8
+area:
+========================0
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+------------------------32
+1  1  1  1  1  1  1  1
+1  1  1  1  1  1  1  1
+0  0  0  0  0  0  0  0
+0  0  0  0  0  0  0  0
+===================================
+** ak common version: libplat_common V1.0.20 mem_trace_flag:0 **
+[     VQE][1970-01-01 00:00:03 830] [ak_vqe_inner_open:2372] ak_vqe_inner_open entry...ai_vqe = 0x0, ao_vqe = 0x102ce6c8
+[    ECHO][1970-01-01 00:00:03 830] ## --AudioFilter Version V1.16.00, Echo--
+[    ECHO][1970-01-01 00:00:03 830] ## jitterBuf: 0x102ce928
+[    ECHO][1970-01-01 00:00:03 830] ## _SD_Echo_Open far_path (0x102ce8b0)
+[    ECHO][1970-01-01 00:00:03 840] ## Echo: load far_NR (disable)
+[    ECHO][1970-01-01 00:00:03 840] ## Echo: load far_Volume
+[    ECHO][1970-01-01 00:00:03 840] ## ASLC OPEN OK ena:1, lookAheadLen:48
+[     VQE][1970-01-01 00:00:03 850] [ak_vqe_inner_open:2470] ak_vqe_inner_open exit...
+[    ECHO][1970-01-01 00:00:03 855] ## Echo: set far_Volume param
+[    ECHO][1970-01-01 00:00:03 860] ## Echo: set far_NR param (enable)
+mv_ao_init success...
+mv_adec_open success
+[    ECHO][1970-01-01 00:00:03 865] ## Echo: set far_Volume param
+[_prompt_file_pick][l:191]prompt content [/mnt/mtd/mvsound/sf_devstarting_en.mp3] caught.
+play mp3 file /mnt/mtd/mvsound/sf_devstarting_en.mp3...
+Play Finished, mp3 decoder size:42624
+go out play mp3 file /mnt/mtd/mvsound/sf_devstarting_en.mp3 , break_status:0
+[1970-01-01 02:00:07] [0:00:07:370] [DEF] update patch check start
+check no patch
+[product_check]product-id:32 max supprot resulotion(1280_960)
+[1970-01-01 02:00:07] [0:00:07:375] [WARN] led init no led_num
+[1970-01-01 02:00:07] [0:00:07:375] [DEF] media init start
+=================================================
+mdq ver: 1.1.0.23_29a9a25[build:Jul 13 2023_19:27:22]
+=================================================
+== mv_platform_ai_init ==
+frame_len=960
+mv_ai_init success...
+mv_aenc_param->audio_codec_type =============== 1
+[ SD_AENC][1970-01-01 00:00:07 505] ## -- AudioCodec Version V1.22.00, type: 17, g711 enc --
+[ SD_AENC][1970-01-01 00:00:07 505] ## _SD_Encode_Open OK (0x104612f8)
+mv_aenc_open success
+[     VQE][1970-01-01 00:00:07 760] [ak_vqe_inner_open:2372] ak_vqe_inner_open entry...ai_vqe = 0x1046112c, ao_vqe = 0x0
+[    ECHO][1970-01-01 00:00:07 765] ## --AudioFilter Version V1.16.00, Echo--
+[    ECHO][1970-01-01 00:00:07 765] ## jitterBuf: 0x10464818
+[    ECHO][1970-01-01 00:00:07 765] ## _SD_Echo_Open near_path (0x10464720)
+[    ECHO][1970-01-01 00:00:07 775] ## Echo: load NR (enable)
+[    ECHO][1970-01-01 00:00:07 780] ## Echo: set AGC param (enable)
+[    ECHO][1970-01-01 00:00:07 780] ## Echo: load near_EQ
+[    ECHO][1970-01-01 00:00:07 780] ## Echo: load near_Volume
+[    ECHO][1970-01-01 00:00:07 780] ## ASLC OPEN OK ena:1, lookAheadLen:48
+[    ECHO][1970-01-01 00:00:07 795] ## Echo: load AEC (disable)
+[     VQE][1970-01-01 00:00:07 795] [loopback_start:1619] aec_enable =0, user->ai_open=1
+ [     VQE][1970-01-01 00:00:07 805] [ak_vqe_inner_open:2470] ak_vqe_inner_open exit...
+[     VQE][1970-01-01 00:00:07 805] [ak_vqe_inner_set_ai_jitterbuf_upperBound:3767] osal_vqe_get_dac entry...
+[    ECHO][1970-01-01 00:00:07 805] ## Echo: set near_JitterBuf param
+[     VQE][1970-01-01 00:00:07 805] [ak_vqe_inner_set_ai_jitterbuf_upperBound:3788] exit...
+== mv_platform_ai_start_capture ==
+*** ai capture start, _g_ai_handle_id ***
+wait aenc param copy over
+=== mvak_start_ai_encode success handle_id ===
+[    ECHO][1970-01-01 00:00:07 815] ## Echo: set near_Volume param
+=== manufacturers_num[0], sensor_id_num[0], type[1345], width[1280], height[720], manufacturers[sc] ===
+=== manufacturers_num[0], sensor_id_num[1], type[1346], width[1280], height[720], manufacturers[sc] ===
+=== width[1280], height[720], manufacturers[sc] ===
+[1970-01-01 02:00:07] [0:00:07:815] [DEF] sensor info sensor_type[1346], sensor_width[1280], sensor_height[720], sensor_manufacturers[sc]
+[1970-01-01 02:00:07] [0:00:07:875] [DEF] get config "isp_cust" = 0, "isp_patch" = 0
+mvp_isp_init
+[_isp_prepare][l:230]try to read patch [/usr/isp_sc1346/c0/l0p0.conf.p] result: 0
+isp path [/tmp/isp_sc1346_c0l0p0.conf]
+[    VPSS][1970-01-01 00:00:07 910] [isp_open:90] dev:0 already opened!
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:657:error: lfs_vfs_open /etc/config/styleId failed, ret - -2
+[    VPSS][1970-01-01 00:00:07 915] [isp.conf]version: DVP_V3_110801, sensor id: 0x1346, style id: 0
+[    VPSS][1970-01-01 00:00:07 915] isp subfile 0, modify time: 2023-11-8 14:59:44
+[    VPSS][1970-01-01 00:00:07 915] 1.first init isp_sc1346.conf file.
+23060701 change exp 20fps
+23110801 change exp
+
+[    VPSS][1970-01-01 00:00:07 915] isp subfile 1, modify time: 2023-11-8 14:57:14
+[    VPSS][1970-01-01 00:00:07 915] 1.first init isp_sc1346.conf file.
+
+[    VPSS][1970-01-01 00:00:07 915] [check_file:419] check isp cfg: /tmp/isp_sc1346_c0l0p0.conf OK
+[    VPSS][1970-01-01 00:00:07 915] [isp_module_init:1540] chipid:0x20150200 !
+[    VPSS][1970-01-01 00:00:07 925] [check_fps_para:465] hight light:
+        frame_rate=20 max_exp_time=1118 low_light_gain=24
+[    VPSS][1970-01-01 00:00:07 925] [check_fps_para:470] low light:
+        frame_rate=15 max_exp_time=1494 light_gain=8
+[    VPSS][1970-01-01 00:00:07 925] [init_fps_info:601] hight light fps: 20
+[    VPSS][1970-01-01 00:00:07 925] [isp_set_sensor_fps:2653] set sensor fps: 20
+[    VPSS][1970-01-01 00:00:07 925] [set_fps:237] set dev:0 fps:20 ok
+[E/DRV]  MIPI: ak_sensor_store_initial_regs para.num;140
+load [/tmp/isp_sc1346_c0l0p0.conf] result = 0
+### Get vi info res main[1280, 720], sub[640, 360] ###
+[A/DRV] ak_cam_vidioc_cropcap 1442 input_id:0, chn_id:0
+
+set devid [0] ------>
+crop.left [0](padding[0], max[0]), crop.top [0], crop.width [1280], crop.height [720]
+max_width [1280], max_height [720], sub_max_width [640], sub_max_height [360]
+
+[A/DRV] ak_cam_vidioc_querycap 1203 input_id:0, chn_id:0
+[A/DRV] ak_cam_vidioc_cropcap 1442 input_id:0, chn_id:0
+[A/DRV] ak_cam_vidioc_set_crop 1505 input_id:0, chn_id:0
+[A/DRV] ak_cam_vidioc_set_crop chn_id:0 left:0, top:0, c.left:0, c.top:0
+[A/DRV] isplib: isp_vi_set_crop sx:0,sy:0,w:1280,h:720
+
+get devid [0] ------>
+crop.left [0], crop.top [0], crop.width [1280], crop.height [720]
+max_width [1280], max_height [720], sub_max_width [640], sub_max_height [360]
+
+[A/DRV] ak_cam_vidioc_set_format 1355, input_id:0, chn_id:0,pix->width:1280, pix->height:720
+[A/DRV] isplib: isp_vo_set_main_channel_scale enter.(1280,720,0,1280,720)
+[A/DRV] ak_cam_vidioc_set_format 1355, input_id:0, chn_id:1,pix->width:640, pix->height:360
+[A/DRV] ak_cam_vidioc_reqbufs 1726 input_id:0, chn_id:0
+[A/DRV] ak_vb2_queue_setup input_id:0, chn_id:0 *count:2, sizeimage:1382400
+[A/DRV] ak_cam_vidioc_querybuf 1750 input_id:0, chn_id:0
+[A/DRV] ak_cam_vidioc_querybuf 1750 input_id:0, chn_id:0
+[A/DRV] ak_vb2_buf_init 474 input_id:0, chn_id:0
+[A/DRV] ak_vb2_buf_init 474 input_id:0, chn_id:0
+[F/DRV] set_interface dvp
+[A/DRV] set_pinctrl_vi 148
+[A/DRV] set_pclk_polar input_id:0
+[F/DRV] set_pclk_polar pclk edge is rising
+[A/DRV] set_sclk 284
+[A/DRV] set_sclk get rate:24000000 end
+[A/DRV] set_ae_fast_default
+[E/DRV]  MIPI: calc_vts_tmp 2250000
+[A/DRV] get_input_scan_method get scan method NONE, set PROGRESSIVE.
+[A/DRV] ak_cam_vidioc_streamon 1822 input_id:0, chn_id:0
+[A/DRV] ak_vb2_start_streaming 723 input_id:0, chn_id:0 count:2
+[A/DRV] ak_vb2_start_streaming 741 input_id:0, chn_id:0 done:0
+[A/DRV] first_chn_input_isp_init 633 enter
+[A/DRV] isplib: isp_vi_start_capturing 1619 isp_id:0
+[A/DRV] ak_vb2_start_streaming 806 input_id:0, chn_id:0 state: 6
+[A/DRV] ak_cam_vidioc_reqbufs 1726 input_id:0, chn_id:1
+[A/DRV] ak_vb2_queue_setup input_id:0, chn_id:1 *count:2, sizeimage:345600
+[A/DRV] ak_cam_vidioc_querybuf 1750 input_id:0, chn_id:1
+[A/DRV] ak_cam_vidioc_querybuf 1750 input_id:0, chn_id:1
+[A/DRV] ak_vb2_buf_init 474 input_id:0, chn_id:1
+[A/DRV] ak_vb2_buf_init 474 input_id:0, chn_id:1
+[A/DRV] ak_cam_vidioc_streamon 1822 input_id:0, chn_id:1
+[A/DRV] ak_vb2_start_streaming 723 input_id:0, chn_id:1 count:2
+[A/DRV] ak_vb2_start_streaming 741 input_id:0, chn_id:1 done:1
+[A/DRV] ak_vb2_start_streaming 762 input_id:0, chn_id:1
+[A/DRV] ak_vb2_start_streaming 806 input_id:0, chn_id:1 state: 3
+f:mv_isp_set_standard, l:411, mode:11
+[E/DRV] uio0 has opened! open_count=2
+[AKV_VENC][1970-01-01 00:00:07 975]
+--VIDAK39--Enc AK39 Encoder Lib V1.10.08--
+
+[AKV_VENC][1970-01-01 00:00:08 005]
+--VIDAK39--Enc AK39 Encoder Lib V1.10.08--
+
+[AKV_VENC][1970-01-01 00:00:08 035]
+--VIDAK39--Enc AK39 Encoder Lib V1.10.08--
+
+[AKV_VENC][1970-01-01 00:00:08 035] ### 152 ###
+[AKV_VENC][1970-01-01 00:00:08 040] ### 183 ###
+[A/DRV] set_sensor_fps_async input_id:0 set fps:20 success
+[     OSD][1970-01-01 00:00:08 085] [request_osd_mem:409] size:61440
+[     OSD][1970-01-01 00:00:08 085] [request_osd_mem:428] INFO:video_ch0, osd_rect:0, p_osd_buffer:0xa6d2a0, p_osd_phy:0x81f6d2a0size: 61440, width:1280, height:96
+[     OSD][1970-01-01 00:00:08 085] [request_osd_dma_mem:323] size:122880
+[     OSD][1970-01-01 00:00:08 090] [request_osd_dma_mem:376] INFO:video_ch0, osd_rect:0, dma_vaddr: 0xa7c2a0, phyaddr: 0x81f7c2a0 size: 122880 w: 1280 h: 96
+[     OSD][1970-01-01 00:00:08 200] [request_osd_mem:409] size:15360
+[     OSD][1970-01-01 00:00:08 200] [request_osd_mem:428] INFO:video_ch1, osd_rect:0, p_osd_buffer:0xa9a2a0, p_osd_phy:0x81f9a2a0size: 15360, width:640, height:48
+[     OSD][1970-01-01 00:00:08 200] [request_osd_dma_mem:323] size:30720
+[     OSD][1970-01-01 00:00:08 200] [request_osd_dma_mem:376] INFO:video_ch1, osd_rect:0, dma_vaddr: 0xa9dea0, phyaddr: 0x81f9dea0 size: 30720 w: 640 h: 48
+=== mvak_start_video_osd success ===
+=== mvp_isp_flip_and_mirror flip_mirror:0 sensor type [4934] ===
+[1970-01-01 02:00:08] [0:00:08:285] [DEF] media init finish
+[1970-01-01 02:00:08] [0:00:08:285] [DEF] mv_network_init start
+[     OSD][1970-01-01 00:00:08 295] [get_font_data_from_file:102] fp:0x102b54ac byte:32
+[QR TEST]window param: [w:640][h:360][x:0][y:0]
+[1970-01-01 02:00:08] [0:00:08:440] [DEF] [NETWORK] dns_group:0
+[     OSD][1970-01-01 00:00:08 475] [ak_osd_LoadBitmap:569] success init
+[A/DRV] MAINCHN0 iomap 0xdf92a0 0x81f6d2a0 size:61440
+[A/DRV] SUBCHN0 iomap 0xe092a0 0x81f9a2a0 size:15360
+[1970-01-01 02:00:08] [0:00:08:750] [DEF] [mv_alarm_init] start
+[1970-01-01 02:00:08] [0:00:08:755] [DEF] ptz ctrl init
+########MRD Lib V1.0.08########
+[A/DRV] ak_cam_vidioc_cropcap 1442 input_id:0, chn_id:0
+[      MD][1970-01-01 00:00:08 800] [md_thread:443] thread id : 0
+[      MD][1970-01-01 00:00:08 800] [ak_md_set_sensitivity:691] sensitivity:80
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[F/DRV] atbm603x wifi lib version:libdrv_wifi_atbm603xS V1.3.1-16
+atbm_init_firmware
+[Wifi] Enter atbm_sdio_module_init
+SVN_VER=2123,DPLL_CLOCK=24,BUILD_TIME=[===SDIO-ATHENAB==
+atbm_sdio_register_init
+atbm: Atbmwifi_halEntry() <===
+atbm_register_bh++++
+atbm_register_bh---
+atbm_HwGetChipType, chipver=0x49, g_wifi_chip_type[3]
+atbm_before_load_firmware++
+atbm_start_load_firmware++
+atbm_start_load_firmware: used firmware.h=
+atbm_start_load_firmware: START DOWNLOAD ICCM=========
+atbm_load_firmware_generic: addr 10000: len 22000
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[      MD][1970-01-01 00:00:08 835] [ak_md_enable:1076] enable:1
+[1970-01-01 02:00:08] [0:00:08:845] [DEF] mv_input_scaner_init start
+[1970-01-01 02:00:08] [0:00:08:980] [DEF] ====== AUTHORITY_SUPPORT ======
+== irfm_lock_state [0] invalid of (1/3/4), set default [0:IR_FEED_STATE_AUTO] ==
+[E/DRV] ain0: no default pinctrl state to config
+=== [ptz cruise info] ===
+ptz positiontotal cnt:6
+ptz cruise route total cnt:1
+ptz cruise route position max:6
+action_type:1
+ptz timer enable:10
+ptz_timer cnt:0
+ptz auto enable:1
+ptz auto routine cnt:1
+=== [timer info] ===
+=== [auto info] ===
+routine 1
+[seq]:0 [point cnt]:4 [time]:00:00:00 ~ 23:50:00
+[id]:2  [stay sec]:60
+[id]:4  [stay sec]:60
+[id]:5  [stay sec]:60
+[id]:3  [stay sec]:60
+[1970-01-01 02:00:09] [0:00:09:375] [DEF] ptz speed hz:720
+[1970-01-01 02:00:09] [0:00:09:375] [DEF] ptz speed hz:720
+[1970-01-01 02:00:09] [0:00:09:430] [DEF] ircut IRCUT_A1_B0
+[1970-01-01 02:00:09] [0:00:09:430] [DEF] [PTZ] ===== set motor params ====
+[1970-01-01 02:00:09] [0:00:09:430] [DEF] [PTZ] H steps_one_circle[4080], total_steps[4080]
+[1970-01-01 02:00:09] [0:00:09:430] [DEF] [PTZ] V steps_one_circle[1200], total_steps[1200]
+[1970-01-01 02:00:09] [0:00:09:435] [DEF] [PTZ] go to ptz self check
+atbm_start_load_firmware: START DOWNLOAD DCCM=========
+atbm_load_firmware_generic: addr 800000: len 9000
+atbm_start_load_firmware: FIRMWARE DOWNLOAD SUCCESS
+atbm_after_load_firmware++
+firmwareCap f589
+firmwareCap2 1984
+wsm_caps.firmwareCap 1984f589
+apollo wifi WSM init done.
+   Input buffers: 42 x 1728 bytes
+   Hardware: 7.1280
+   WSM firmware [=MODEM=RF=Ares_AX  2GHZ Sep  4 2023 13:38:14NOTXConfrim ap sleep]
+LmacVersion: 18128, build: 2960, api: 1060, cap: 0x1984F589 Config[30004]  expection 900b80c, ep0 cmd addr 901d3f8
+CAPABILITIES_ATBM_PRIVATE_IE   [0]
+CAPABILITIES_IPC                [0]
+CAPABILITIES_NO_CONFIRM                    [1]
+CAPABILITIES_SDIO_PATCH                    [0]
+CAPABILITIES_NO_BACKOFF                    [0]
+CAPABILITIES_CFO                [0]
+CAPABILITIES_AGC                [1]
+CAPABILITIES_TXCAL              [1]
+CAPABILITIES_MONITOR            [0]
+CAPABILITIES_CUSTOM             [1]
+CAPABILITIES_SMARTCONFIG        [0]
+CAPABILITIES_ETF                        [1]
+CAPABILITIES_LMAC_RATECTL       [1]
+CAPABILITIES_LMAC_TPC           [1]
+CAPABILITIES_LMAC_TEMPC         [1]
+CAPABILITIES_CTS_BUG            [0]
+CAPABILITIES_USB_RECOVERY_BUG    [0]
+CAPABILITIES_USE_IPC                            [0]
+CAPABILITIES_OUTER_PA                   [0]
+CAPABILITIES_POWER_CONSUMPTION  [0]
+CAPABILITIES_RSSI_DECIDE_TXPOWER        [0]
+CAPABILITIES_RTS_LONG_DURATION  [1]
+CAPABILITIES_TX_CFO_PPM_CORRECTION[1]
+CAPABILITIES_SHARE_CRYSTAL         [0]
+CAPABILITIES_HW_CHECKSUM                        [0]
+CAPABILITIES_SINGLE_CHANNEL_MULRX [1]
+CAPABILITIES_CFO_DCXO_CORRECTION        [1]
+atbmwifi_queue_init,cap(64)
+atbmwifi_queue_init,cap(64)
+atbmwifi_queue_init,cap(64)
+atbmwifi_queue_init,cap(64)
+[F/DRV] read /etc/config/atbm_wifi_macaddr.txt error
+MAC Addr[0]:[4c:60:ba:21:b8:77]
+efuse data is [0x1,0x3b,0x1e,0x1f,0x1f,0xa,0x0,0x0,0x4c:0x60:0xba:0x21:0xb8:0x77]
+[F/DRV] read /etc/config/atbm_txpwer_dcxo_cfg.txt error
+[F/DRV] read /etc/config/atbm_rate_power.txt error
+atbmwifi_netstack_init
+__wpa_event_init
+atbmwifi_netstack_init   END
+atbm_alloc_netdev,netdev(0xc001bd34),nif(0xc0020dfc),priv(0xc001bd48)
+atbm_alloc_netdev,netdev(0xc0020e94),nif(0xc0025f5c),priv(0xc0020ea8)
+enable cfo success!
+[F/DRV] [atbm6031_init]-line:137 wifi init done!
+[F/DRV] wifi init time is:754ms
+[1970-01-01 02:00:09] [0:00:09:560] [DEF] ircut IRCUT_A0_B0
+[1970-01-01 02:00:09] [0:00:09:560] [DEF] [NETWORK] module type:108 mode:2
+[NET] ap WIFI_MODULE_NORMAL
+[UWLAN_E] F:uwlan_set_mode L:543 stop ap failed!
+[    VPSS][1970-01-01 00:00:09 760] [isp_switch:265] switching isp mode -> day
+[E/LFS] components/fs/littlefs/littlefs_vfs.c:657:error: lfs_vfs_open /etc/config/styleId failed, ret - -2
+[    VPSS][1970-01-01 00:00:09 765] [isp.conf]version: DVP_V3_110801, sensor id: 0x1346, style id: 0
+[    VPSS][1970-01-01 00:00:09 765] isp subfile 0, modify time: 2023-11-8 14:59:44
+[    VPSS][1970-01-01 00:00:09 765] 1.first init isp_sc1346.conf file.
+23060701 change exp 20fps
+23110801 change exp
+
+[    VPSS][1970-01-01 00:00:09 765] isp subfile 1, modify time: 2023-11-8 14:57:14
+[    VPSS][1970-01-01 00:00:09 775] 1.first init isp_sc1346.conf file.
+
+[    VPSS][1970-01-01 00:00:09 775] [check_file:419] check isp cfg: /tmp/isp_sc1346_c0l0p0.conf OK
+[    VPSS][1970-01-01 00:00:09 780] [check_fps_para:465] hight light:
+        frame_rate=20 max_exp_time=1118 low_light_gain=24
+[    VPSS][1970-01-01 00:00:09 780] [check_fps_para:470] low light:
+        frame_rate=15 max_exp_time=1494 light_gain=8
+[    VPSS][1970-01-01 00:00:09 785] [init_fps_info:601] hight light fps: 20
+[    VPSS][1970-01-01 00:00:09 785] [isp_set_sensor_fps:2653] set sensor fps: 20
+[    VPSS][1970-01-01 00:00:09 785] [set_fps:237] set dev:0 fps:20 ok
+[    VPSS][1970-01-01 00:00:09 790] [check_fps_para:465] hight light:
+        frame_rate=20 max_exp_time=1118 low_light_gain=24
+[    VPSS][1970-01-01 00:00:09 790] [check_fps_para:470] low light:
+        frame_rate=15 max_exp_time=1494 light_gain=8
+[    VPSS][1970-01-01 00:00:09 790] [init_fps_info:601] hight light fps: 20
+[    VPSS][1970-01-01 00:00:09 790] [isp_set_sensor_fps:2653] set sensor fps: 20
+[    VPSS][1970-01-01 00:00:09 790] [set_fps:237] set dev:0 fps:20 ok
+[1970-01-01 02:00:09] [0:00:09:795] [DEF] [ISP] >>> schn:0 set standard mode:11, hz:60
+[    VPSS][1970-01-01 00:00:09 795] [isp_set_sensor_fps:2653] set sensor fps: 20
+[    VPSS][1970-01-01 00:00:09 795] [set_fps:237] set dev:0 fps:20 ok
+[1970-01-01 02:00:09] [0:00:09:800] [DEF] [ISP] >>> schn:0 set standard exp time:186
+[    VPSS][1970-01-01 00:00:09 800] [ak_vpss_set_ae_attr:835] BC_rate range param error!
+[1970-01-01 02:00:09] [0:00:09:800] [WARN] [ISP] schn:0 set ae attr failed [257]
+[A/DRV] set_sensor_fps_async input_id:0 set fps:20 success
+[F/DRV] atbm6031_set_mode 0
+atbmwifi_start_wifimode:other_alive_if(0),all_alive_if(0)
+[F/DRV] atbm6031_set_mode 1
+[A/AOS] netdev_register netdev 0x8034e9b8 name wlan0
+ atbmwifi_del_key  err (0 1)
+atbmwifi_del_key  err (0 0)
+wpa_supplicant_event_disassoc 512
+wpa_s->wpa_state =0
+wpa_deauthen
+atbm_reorder_func_reset.
+auto_connect_when_lost=0
+[1970-01-01 02:00:09] [0:00:09:880] [DEF] mvs_dd_service_init start
+[1970-01-01 02:00:09] [0:00:09:880] [DEF] init ip: mac: netmask: gw:
+[1970-01-01 02:00:09] [0:00:09:880] [DEF] mv_server_init init start
+===not exist !!
+#######login handle create: 14052##########
+[1970-01-01 02:00:09] [0:00:09:890] [DEF] mv_server_init init finish
+[1970-01-01 02:00:09] [0:00:09:890] [DEF] === end ===
+env mode:0
+ATBM_WIFI_STA_STOP
+All Interface is down
+[F/DRV] atbm6031_set_mode 0
+[1970-01-01 02:00:10] [0:00:10:470] [DEF] pwifi_info->net_info.av8_mac_str:4c:60:ba:21:b8:77
+[1970-01-01 02:00:10] [0:00:10:470] [DEF] -------------------- wifi  sta  conn -------------------
+[NET] sta NET_STA_CONNECTING(4)
+[1970-01-01 02:00:10] [0:00:10:470] [DEF] [NETWORK] sta connect ssid:Timur pwd:T31012013
+[_prompt_file_pick][l:191]prompt content [/mnt/mtd/mvsound/sf_connecting_en.mp3] caught.
+play mp3 file /mnt/mtd/mvsound/sf_connecting_en.mp3...
+[UWLAN_E] F:uwlan_set_mode L:543 stop ap failed!
+[F/DRV] atbm6031_set_mode 0
+ atbmwifi_start_wifimode:other_alive_if(0),all_alive_if(0)
+[F/DRV] atbm6031_set_mode 1
+
+[F/DRV] atbm603x_join...
+ING>atbm_wifi_on_vif+_mode 0+
+...
+wsm_join
+sta_join_ ATBM_IEEE80211_STYPE_AUTH
+ set_suites: rsn
+p(16),g(16),k(2)
+wpa[2],key_mgmt[2],privacy[1],auth_alg[0]
+atbmwifi_tx_sta_mgmtframe  bssid=98 39:86
+[sta]:send STYPE_AUTH
+send_auth alg(0),transaction(1),ielen(0)
+atbmwifi_tx_sta_mgmtframe  bssid=98 39:86
+[sta]:send ASSOC_REQ
+atbmwifi_rx_assoc_rsp
+RX AssocRsp (capab=0x431 status=0 aid=6)
+ATBM: wmm is Support
+rate_control_pid_sta_rate_init
+connectap success ret=0
+WPA: RX M1/4-Way Handshake from 98:de:d0:fd:39:86 (ver=2)
+RSN: M1/4 key data
+WPA: Tx EAPOL-Key 2/4.....
+WPA: Tx EAPOL-Key 2/4
+[TX] wpa_state 7.assoc_ok 1
+WPA: RX M3/4-Way Handshake from 98:de:d0:fd:39:86 (ver=2)
+WPA: Sending EAPOL-Key 4/4
+WPA:install ptk
+4 and 2 way handshake done!!!!
+[TX] wpa_state 9.assoc_ok 1
+ event ID = 106, 3
+WLAN_EVT_STA_CONNECTED ap mac: 98: de: d0: fd: 39: 86:
+[F/DRV] wifi backup usr data ok!
+
+dhcp tx ----
+rx ADDBA_REQ:ssn(0),tid(0),link_id(1),win_size(64)
+dhcp tx ----
+dev->userdata:0x8034e928, netif_default:0x8034e928
+dns[0]:192.168.0.1
+dns[1]:0.0.0.0
+dns[2]:0.0.0.0
+dns[3]:0.0.0.0
+Play Finished, mp3 decoder size:19584
+[1970-01-01 02:00:11] [0:00:11:260] [DEF] [NETWORK] check connect status e_module_type:108
+[1970-01-01 02:00:11] [0:00:11:260] [DEF] [NETWORK] get ip:192.168.0.108 gateway:192.168.0.1
+[NET] sta NET_STA_CONNECT_SUCC(5)
+[1970-01-01 02:00:11] [0:00:11:260] [DEF] restart ip:192.168.0.108 mac:4c:60:ba:21:b8:77 netmask:255.255.255.0 gw:192.168.0.1
+[1970-01-01 02:00:11] [0:00:11:260] [DEF] platform_cloud_service_init start
+_pth_tlv_worker start
+[1970-01-01 02:00:11] [0:00:11:360] [DEF] mv_main_handel_ota_init start
+[1970-01-01 02:00:11] [0:00:11:575] [DEF] domain:84465821.nvdvr.net user:250707184542341 pwd:8888
+[1970-01-01 02:00:11] [0:00:11:615] [DEF] ddns get 4c:60:ba:21:b8:77
+new main P2P Domain: ipc84.w390.net => [8.211.32.74]
+ota init result : 0
+_ddns_client_register user:250707184542341 pwd:8888 ret:0
+[_udip_update_local_net_attr][l:245]main,sub,bak [1243665160, 0, 0]
+ event ID = 106, 0
+[E/rom] ERROR: Failed to find directory directory entry for '/dev/rtc': -2
+[settimeofday]open device failed]
+settimeofday error: No such file or directory
+go out play mp3 file /mnt/mtd/mvsound/sf_connecting_en.mp3 , break_status:0
+[_prompt_file_pick][l:191]prompt content [/mnt/mtd/mvsound/sf_connected_en.mp3] caught.
+play mp3 file /mnt/mtd/mvsound/sf_connected_en.mp3...
+[2025-07-16 15:21:48] [0:00:12:290] [DEF] [NETWORK] ping init fail
+IFCReadStringOnce_VNL Warning:no such file(/mnt/mtd/ota_status_log.cache)
+[0:00:12][WRN][urec][TCP]Connect poll failed !!
+[0:00:12][WRN][urec][TCP]Connect [120.24.173.70:8002] failed !!
+[1220192ad27ab3f7b0ac5da2b4bb2430]
+[2025-07-16 15:21:49] [0:00:13:165] [DEF] domain:84465821.nvdvr.net user:250707184542341 pwd:8888
+[0:00:13][WRN][mvt_ota][TCP]Connect poll failed !!
+[0:00:13][WRN][mvt_ota][TCP]Connect [218.91.199.250:443] failed !!
+[0:00:13][WRN][mvt_ota][TLS]Connect [devota.av380.net:443] failed -16
+Play Finished, mp3 decoder size:29952
+go out play mp3 file /mnt/mtd/mvsound/sf_connected_en.mp3 , break_status:0
+ota querior result 175,body len:33, code:rsp = (200)[{"interval":43200,"result":-1003}]
+ner info code = 0
+IFCReadStringOnce_VNL Warning:no such file(/mnt/mtd/ota_status_log.cache)
+[2025-07-16 15:21:53] [0:00:17:640] [DEF] turn to last pos h:20 v:513
+[2025-07-16 15:21:53] [0:00:17:640] [DEF] == set ptz to position [20, 513], cur position [2040, 600]==
+[2025-07-16 15:21:55] [0:00:19:665] [DEF] now horizon[20]
+[2025-07-16 15:21:55] [0:00:19:755] [DEF] now vertical[513]
+[2025-07-16 15:21:55] [0:00:19:760] [DEF] === start mv_recorder ptz_pos ===
+[2025-07-16 15:21:55] [0:00:19:760] [DEF] === need to record cur postion h:20 v:513===
+[2025-07-16 15:21:55] [0:00:19:780] [DEF] ptz init finish
+[E/rom] ERROR: Failed to find directory directory entry for '/dev/rtc': -2
+[settimeofday]open device failed]
+settimeofday error: No such file or directory
+[c37c02f61ffc460c0016beb773c9fec3]
+[0:00:21][WRN][push][TCP]Recv failed, retcode=[0], errno=[128] analyse plz
