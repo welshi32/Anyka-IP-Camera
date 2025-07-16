@@ -151,3 +151,18 @@ Bootloader treating UART as test entry trigger (factory escape hatch)
 A simple check for line low / pin state on RX GPIO during early boot
 
 There is no busybox, ls, ps, or full shell — even if UART boots through, it lands in a minimal pseudo-shell (>) with read-only access and no tools.
+
+## PSA
+This is a $4 camera resold for ₴900+
+
+If you bought a V380/PTZ/AI WiFi camera locally for ₴900 or more, congratulations:
+
+You overpaid 450% for a camera with:
+- No standards support
+- No security
+- No update path
+- No thermal management
+
+This repository exists to expose that, dissect the firmware, and eventually re-flash the thing with Linux or something usable.
+
+Don’t blame yourself. Blame the supply chain.
